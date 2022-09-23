@@ -9,12 +9,12 @@ confirm = confirm.lower()
 customers = []
 
 while (confirm):
-# it keeps printing the prompting until the user enters 'no' or 'n'
-# the Yes/No response is not case sensitive and 'y' and 'n' would do
-# any other response is invalid and the customer's names have to be two
+    # it keeps printing the prompting until the user enters 'no' or 'n'
+    # the Yes/No response is not case sensitive and 'y' and 'n' would do
+    # any other response is invalid and the customer's names have to be two
     try:
         if ((confirm == 'y') | (confirm == 'yes')):
-            fname, lname=input("Enter Customer Name : ").split()
+            fname, lname = input("Enter Customer Name : ").split()
             customers.append({'first': fname, 'last': lname})
             confirm = input("Register Another Customer (Yes/No): ")
             confirm = confirm.lower()
