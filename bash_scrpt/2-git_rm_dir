@@ -2,14 +2,14 @@
 
 echo -e "Enter the directory to be removed from git: \c"
 
-read -e -r file
+read -e -r dir
 
-git rm -r $"$file"
+git rm -r $"$dir"
 
 echo -e "Commit Message (no quotation marks): \c"
 
-read -e  -r message
+read -e  -r commit
 
-git commit -m $"$message"
+git commit -m $"$commit"
 
 git push
