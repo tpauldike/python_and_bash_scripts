@@ -17,6 +17,9 @@ When you run this script, it prints a prompt for you to enter the file path or t
 ### [1-git_rm](./1-git_rm)
 This script works just like *0-git_add*, described above, but rather removes from git the file that you pass to it.
 
+### [2-git_rm_dir](./2-git_rm_dir)
+This script works like *1-git_rm* but recursively removes a sub-directory in the repository and all of its content
+
 ## How to use scripts on your CLI:
 - Copy and paste or type the codes into a file (use any simple and short name of your choice for the file)
 - Make the file executable with the command `chmod u+x <file_name>`
