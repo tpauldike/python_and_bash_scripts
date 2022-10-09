@@ -4,15 +4,12 @@
 ASCII codes, thereby making it a secret message.
      Author: Topman Paul-Dike
 '''
-uppercase = input('Enter your message (alphbets only) to hide it in codes,\n'
-                  'please separate each word with double spaces:\n$: ')
-uppercase = uppercase.upper()
+secret = input('Enter your message to hide it in codes below:\n')
+letters = []
 
-print('The secret message is:')
-for i in range(0, len(uppercase), 1):
-    secret = ord(uppercase[i])
-    if (uppercase[i] >= 'A') and (uppercase[i] <= 'Z'):
-        print(secret, end = "")
-    else:
-        print('{}'.format(uppercase[i]), end = "")
+print('The secret message in codes is:')
+for letter in secret:
+    letters.append(ord(letter))
+for code in letters:
+    print(code, end=' ')
 print()
