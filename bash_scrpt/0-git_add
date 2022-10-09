@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo -e "Enter the file to be pushed: \c"
+
+read -e -r file
+
+git add $"$file"
+
+echo -e "Enter Your Commit Message (no quotation marks): \c"
+
+read -e  -r message
+
+git commit -m $"$message"
+
+git push
+
