@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 '''
-   A program that converts a message written in ASCII codes to letters
-when the codes are pasted as the input. This works excellently for
-uppercases written with double spaces between each single word.
+   A program that decodes messages written in ASCII codes and changes them
+into readable characters
 '''
-secret = input('Paste the codes to be interpreted below:\n:# ')
+secret = input('Paste the codes to be interpreted below:\n>>> ').split()
+codes = []
+readable = []
 
-for i in range(0, len(secret)-1, 2):
-    if (secret[i] == ' '):
-        print(' ', end = "")
-        continue
-    message = (secret[i] + secret[i+1])
-    convert = int(message)
-    decoded = chr(convert)
-    print(str(decoded), end = "")
-
-print()
+print('\nTHE MESSAGE HIDDEN IN THE CODES IS:')
+for code in secret:
+    codes.append(code)
+for i in codes:
+    readable.append(int(i))
+for message in readable:
+    print(chr(message), end='')
+print('\n')
