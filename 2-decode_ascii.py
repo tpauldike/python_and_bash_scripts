@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
    A program that decodes messages written in ASCII codes and changes them
 into readable characters

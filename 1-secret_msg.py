@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
   A program that converts messages written in text to
 ASCII codes, thereby making it a secret message.
