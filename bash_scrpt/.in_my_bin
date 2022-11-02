@@ -1,5 +1,6 @@
 p for git push
 r for git rm
-s for secret message
-d for decode message
+s for secret message in ASCII
+d for decode ASCII message
 rd for git rm -r
+rs for reverse string
