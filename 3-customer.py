@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     A program that accepts customers' firstnames and lastnames and prints
 the list of the newly registered customers at the end of the execution

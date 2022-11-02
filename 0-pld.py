@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 sentence = ('This is a PLD session with cohort 7, 8 and 9, '
             'it was supposed to be for cohort seven but others joined')
 
