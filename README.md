@@ -24,12 +24,12 @@ I learned how to:
 - create instances
 - define some functions ***and so on***
 
-## Encrypt a message
+## 5. Encrypt a message
 This program encrypts the string passed to it by moving all alhabets and numbers seven times from its relative position (e.g; **a** will be **h** and **0** will be **7**)
 
 The prograg does not move any character that is neither an uppercase alphabet (A...Z) or a lowercase alphabet (a...z) or a digit (0...9) because checks are placed. The program also performs the shift within a defined range. For example, it will not replace an uppercase with a lowercase alphabet.
 
 Thanks to **Derek Banas**; he thought me and I owned the code
 
-## Decrypt the message
+## 6. Decrypt the message
 This program reverses the action of [5-encrypted.py](./5-encrypted.py) described above
