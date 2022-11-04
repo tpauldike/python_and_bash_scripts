@@ -19,6 +19,14 @@ for words in message:
             if code < ord('a'):
                 code += 26
         secret += chr(code)
+    elif words.isdigit():
+        code = ord(words)
+        code += shift
+        if code > ord('9'):
+            code -= 10
+        if code < ord('0'):
+            code += 10
+        secret += chr(code)
     else:
         secret += words
-print("Message Decripted!\n---\n", secret, end="\n---\n")
+print("Message Encrypted!\n---\n", secret, end="\n---\n")
