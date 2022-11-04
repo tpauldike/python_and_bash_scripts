@@ -1,6 +1,11 @@
-p for git push
+The following are the commands I use to run my bash scripts and python scripts that has been written to make certain things easier and faster. These scripts are in my bin directory as executable files, so I only need to type in the command and hit enter to have any of them run on my CLI.
+
+p for git add
 r for git rm
 s for secret message in ASCII
 d for decode ASCII message
 rd for git rm -r
 rs for reverse string
+r7 for encrypt/decrypt string by +7
+l7 for encrypt/decrypt string by -7
+
