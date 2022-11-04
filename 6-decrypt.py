@@ -19,6 +19,14 @@ for words in encrypted:
             if code < ord('a'):
                 code += 26
         decrypted += chr(code)
+    elif words.isdigit():
+        code = ord(words)
+        code -= shift
+        if code > ord('9'):
+            code -= 10
+        if code < ord('0'):
+            code += 10
+        decrypted += chr(code)
     else:
         decrypted += words
 print("Message Decrypted!\n---\n", decrypted, end="\n---\n")
