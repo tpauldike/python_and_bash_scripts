@@ -1,4 +1,7 @@
-The following are the commands I use to run my bash scripts and python scripts that has been written to make certain things easier and faster. These scripts are in my bin directory as executable files, so I only need to type in the command and hit enter to have any of them run on my CLI.
+# The following are the commands I use to run my bash scripts and python scripts
+#+ that has been written to make certain things easier and faster. These scripts
+#+ are in my bin directory as executable files, so I only need to type in the
+#+ command and hit enter to have any of them run on my CLI.
 
 p for git add
 r for git rm
