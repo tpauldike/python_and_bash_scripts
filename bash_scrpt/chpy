@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+chmod u+x *.py
+echo -e "--------\nAll '.py' files here have been made executable!\n--------"
