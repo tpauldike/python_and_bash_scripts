@@ -1,0 +1,13 @@
+#!/bin/bash
+# A script that clones a repo with the PAT automatically when it is
+#+ run with the github username and git repo as the 1st and 2nd
+#+ arguments, respectively.
+USER=$1
+REPO=$2
+PAT='[your_PAT]'
+
+echo ----------------------------------------------------
+echo "Cloning the repository \"$REPO\", owned by \"$USER\"..."
+echo ----------------------------------------------------
+	git clone https://$PAT@github.com/$USER/$REPO.git 2> .logs_from_clone
+echo -e '\t\tDone!!!'
