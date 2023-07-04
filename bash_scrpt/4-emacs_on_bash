@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+emacs $1 -nw
