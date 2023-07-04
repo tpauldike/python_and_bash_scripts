@@ -1,8 +1,8 @@
-# Bash Scripts
+# Personal Bash Scripts
 Bash scripts make a lot easier as it is able to make several commands run, one after the other, without the user having to enter them. 
 Here are some bash scripts I use including the python scripts in the [parent directory](../python-and-I) that generates ASCII value in order to encrypt the message and decodes secret messages in ascii form, repectively.
 
-***Please, you may want to see the general instructions on [How to use scripts on your CLI](#usage) before using any of these scripts***
+***Please, you may want to see the general instructions, at the bottom of the README, on [How to use scripts on your CLI](#usage) before using any of these scripts***
 
 In this directory are the following:
 ### 0. [0-git_add](./0-git_add)
@@ -41,7 +41,7 @@ It is very important for you to know that, you have to edit this particular file
 PAT='[your_PAT]'
 ```
 
-Replace the template with your PAT as shown below:
+Replace the template with your PAT enclosed within single quotes, as seen below:
 ```bash
 PAT='ghgaKihkadjiwlLkjai898&l90'
 ```
@@ -52,4 +52,9 @@ And you are good to go, provided you follow the general instructions on [How to 
 - Copy and paste or type the codes into a file (use any simple and short name of your choice for the file, not necessarily the name used here)
 - Make the file executable with the command `chmod u+x <file_name>`
 - Move the file into your bin directory to make it global, `sudo mv <file> /bin` or `sudo mv <file> /usr/bin`.
+> *Please be very careful here, you could ruin your system if you make a mistake in this particular step*.
 - Run your script from anywhere on your terminal by simply entering the name. *If the sudo command is not available in your OS, you might not be able to move it to `/bin`, you have to run the file by entering `./<file>` in the directory where the executable file is present.*
+
+###### If you find anything confusing or difficult, please contact the author.
+
+##### Author: [Topman Paul-Dike](./https://github.com/tpauldike) - [Twitter](https://twitter.com/tpauldike)
