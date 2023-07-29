@@ -12,3 +12,5 @@ rs for reverse string
 r7 for encrypt/decrypt string by +7
 l7 for encrypt/decrypt string by -7
 chpy for chmod u+x *.py
+g <repo> for cloning with ssh
+gpat <username> <repo> for cloning with PAT
