@@ -2,6 +2,12 @@
 # A script that clones a repo with the PAT automatically when it is
 #+ run with the github username and git repo as the 1st and 2nd
 #+ arguments, respectively.
+
+if [ $# -ne 2 ]; then
+  echo "Usage: gpat <owner's username> <repo_name>"
+  exit 1
+fi
+
 USER=$1
 REPO=$2
 PAT='[your_PAT]'
