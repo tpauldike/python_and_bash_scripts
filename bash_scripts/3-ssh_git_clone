@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# A script to make cloning by 'ssh' easier
+
+SSH_URL="^git@github\.com:codetrybe/[[:alnum:]_-]+\.git$"
+REPO="^[[:alnum:]_-]+$"
+
+if [ $# -ne 1 ]; then
+        echo "Enter either the name of the repo OR the ssh url"
+        echo "Usage: g <repo_name_OR_ssh_url>"
+        exit 1
+# Checking for valid ssh url or repo name
+elif [[ $1 =~ $SSH_URL ]]; then
+        git clone $1
+elif [[ $1 =~ $REPO ]]; then
+        git clone git@github.com:codetrybe/$1.git
+else    
+        echo "Invalid input!!"
+        echo "Usage: g <repo_name_OR_ssh_url>"
+fi

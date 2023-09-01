@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# A script to make cloning by 'ssh' easier
-git clone git@github.com:tpauldike/$1.git
