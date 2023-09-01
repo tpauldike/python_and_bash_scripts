@@ -3,17 +3,37 @@
 #+ run with the github username and git repo as the 1st and 2nd
 #+ arguments, respectively.
 
-if [ $# -ne 2 ]; then
-  echo "Usage: gpat <owner's username> <repo_name>"
-  exit 1
+# Have the regular expression that the username & repo must match
+USER="^[[:alnum:]_-]+$"
+REPO="^[[:alnum:]_-]+$"
+PAT='[YOUR_PERSONAL-ACCESS-TOKEN]'
+
+# Choose the default owner, if only a valid repo was provided
+if [ $# -eq 1 ] && [[ $1 =~ $REPO ]]; then
+	USER="tpauldike"
+	REPO=$1
+elif [ $# -eq 2 ]; then
+# Check the user and repo if 2 arguments were provided
+	if [[ $1 =~ $USER ]] && [[ $2 =~ $REPO ]]; then
+		USER=$1
+		REPO=$2
+	else
+		echo "Invalid username or repo name!"
+		exit 1
+	fi
+# Throw an error if the inputs were not valid and display help
+else
+	echo "Error: Input not valid"
+        echo -e "Usage:\tgpat <owner's username> <repo_name>"
+        echo -e "OR:\tgpat <repo_name> to clone your own repo"
+        exit 1
 fi
-
-USER=$1
-REPO=$2
-PAT='[your_PAT]'
-
+# The custom display while cloning the repo 
 echo ----------------------------------------------------
 echo "Cloning the repository \"$REPO\", owned by \"$USER\"..."
 echo ----------------------------------------------------
-	git clone https://$PAT@github.com/$USER/$REPO.git 2> .logs_from_clone
+
+# Log the date, time and error into a hidden file in home directory
+echo $(date +"%Y-%m-%d %H:%M:%S") GMT >> ~/.logs_from_clone
+git clone https://$PAT@github.com/$USER/$REPO.git 2>> ~/.logs_from_clone
 echo -e '\t\tDone!!!'
