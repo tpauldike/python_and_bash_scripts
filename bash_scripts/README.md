@@ -25,7 +25,7 @@ This script works just like **0-git_add**, described above, but rather removes f
 This script works like *1-git_rm* but recursively removes a sub-directory in the repository and all of its content
 
 ### 3. [3-ssh_git_clone](./3-ssh_git_clone)
-For me, I saved all of this as `g`, so that if I did `g <repo>`, the repository will be cloned. In other words, I don't have to enter `git clone <github_ssh_link>`.
+For me, I saved all of this as `g`, so that if I did e`g <repo>`, the repository will be cloned. In other words, I don't have to enter `git clone <github_ssh_link>`.
 The script might not make enough sense to you if you don't know how to use **ssh**, the script for those who use http and PAT (personal access token) to git clone is actually, [5-clone_with_my_PAT](./5-clone_with_my_PAT).
 
 ### 4. [4-emacs_on_bash](./4-emacs_on_bash)
