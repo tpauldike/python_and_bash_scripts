@@ -56,7 +56,7 @@ Replace the template with your PAT enclosed within single quotes, as illustrated
 PAT='ghgaKihkadjiwlLkjai898&l90'
 ```
 
-One more thing; replace the word *codetrybe* with your GitHub username, you find a line like this in [the script](./5-clone_with_my_PAT):
+One more thing; replace the word *codetrybe* with your GitHub username, where you find a line like this in [the script](./5-clone_with_my_PAT):
 ```bash
 USER="codetrybe"
 ```
