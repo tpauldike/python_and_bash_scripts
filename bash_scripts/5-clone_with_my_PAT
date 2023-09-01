@@ -10,7 +10,7 @@ PAT='[YOUR_PERSONAL-ACCESS-TOKEN]'
 
 # Choose the default owner, if only a valid repo was provided
 if [ $# -eq 1 ] && [[ $1 =~ $REPO ]]; then
-	USER="tpauldike"
+	USER="codetrybe"
 	REPO=$1
 elif [ $# -eq 2 ]; then
 # Check the user and repo if 2 arguments were provided
