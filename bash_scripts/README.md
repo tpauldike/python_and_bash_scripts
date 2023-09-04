@@ -1,4 +1,4 @@
-# <a name="top"></a>Personal Bash Scripts:
+# <a name="top"></a>Personal Bash Scripts
 Bash scripts make a lot easier as it is able to make several commands run, one after the other, without the user having to enter them. 
 Here are some bash scripts I use including the python scripts in the [parent directory](../python-and-I) that generates ASCII value in order to encrypt the message and decodes secret messages in ascii form, repectively.
 
