@@ -1,8 +1,10 @@
 #!/bin/bash
 # initialize a git repository and have it hosted automatically, having created the GitHub repository for it.
+# Remember to:
+#+	Replace [PAT] with your Personal Access Token
+#+ 	Replace [USERNAME] with your GitHub username
 
 GITREPO=$1
-USER=?
 
 if [ $# -eq 1 ]; then	
 	GITBRANCH="main"
@@ -18,5 +20,5 @@ git init
 git add .
 git commit -m "initial commit"
 git branch -M $GITBRANCH
-git remote add origin git@github.com:$USER/$GITREPO.git
+git remote add origin https://[PAT]@github.com/[USERNAME]/$GITREPO.git
 git push -u origin $GITBRANCH
