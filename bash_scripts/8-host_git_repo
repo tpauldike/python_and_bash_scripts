@@ -1,0 +1,19 @@
+#!/bin/bash
+# initialize a git repository and have it hosted automatically, having created the GitHub repository for it.
+
+GITREPO=$1
+USER="?"
+
+if [ $# -eq 1 ]; then	
+	GITBRANCH="main"
+elif [ $# -eq 2 ]; then
+	GITBRANCH=$2
+else
+	echo -e "Usage:\t./8-host_git_repo <repository> <branch_name>"
+	echo 'The second argument is optional and "main" by default'
+	exit 1
+fi
+
+git remote add origin git@github.com:$USER/$GITREPO.git
+git branch -M $GITBRANCH
+git push -u origin $GITBRANCH
