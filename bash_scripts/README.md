@@ -1,6 +1,6 @@
 # <a name="top"></a>Personal Bash Scripts
-Bash scripts make a lot easier as it is able to make several commands run, one after the other, without the user having to enter them. 
-Here are some bash scripts I use including the python scripts in the [parent directory](../python-and-I) that generates ASCII value in order to encrypt the message and decodes secret messages in ascii form, repectively.
+Bash scripts make a lot of work easier as it is able to make several commands run, one after the other, without the user having to enter them, one-by-one. 
+Here are some scripts that I use (including the ones in the [python_scripts directory](../python-and-I)), to automate certain processes.
 
 ***Please, you may want to see the general instructions, at the bottom of the README, on [How to use scripts on your CLI](#usage) before using any of these scripts***
 
@@ -8,11 +8,11 @@ In this directory are the following:
 ### 0. [0-git_add](./0-git_add)
 A script that makes it easier for you to push to git on shell without having to enter:
 
-`git add <file_path>`
-
-`git commit -m '<commit message>'`
-
-`git push`
+```bash
+$ git add <file_path>
+$ git commit -m '<commit message>'
+$ git push
+```
 
 When you run this script, it prints a prompt for you to enter the file path or the file you wish to push, after which it let's you enter your commit message without the command or `-m` or quotation marks (' ', " "), and then the file(s) is/are pushed to git automatically.
 
