@@ -1,6 +1,6 @@
 # <a name="top"></a>Personal Bash Scripts
 Bash scripts make a lot of work easier as it is able to make several commands run, one after the other, without the user having to enter them, one-by-one. 
-Here are some scripts that I use (including the ones in the [python_scripts directory](../python-and-I)), to automate certain processes.
+Here are some scripts that I use (including the ones in the [python_scripts directory](../python_scripts)), to automate certain processes.
 
 ***Please, you may want to see the general instructions, at the bottom of the README, on [How to use scripts on your CLI](#usage) before using any of these scripts***
 
