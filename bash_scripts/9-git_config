@@ -1,0 +1,43 @@
+#!/bin/bash
+# A script that configures git globally in a system for a user
+
+USERNAME=$1
+EMAIL=$2
+NAMEREGEX='^[[:alnum:]_-]+$'
+EMAILREGEX='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+
+# if '-me' is the argument passes, use the details here
+if [ $# -eq 1 ] && [ $1 = '-me' ]; then
+    USERNAME=[YOUR_GITHUB_USERNAME]
+    EMAIL=[YOUR_EMAIL_FOR_GITHUB]
+
+# else, if argument is '--help' or none, display help on usage
+elif [ $# -eq 0 ] || [ $1 = '--help' ]; then
+    echo -e 'Usage:\t./9-git_config <username> <email>'
+    echo -e 'OR:\t./9-git_config -me (for the owner)'
+    echo 'If your script is not named "./9-git_config", you should rather use the name of your script in place of "./9-git_config" in the help provided here'
+    exit -1
+
+# If more than 2 arguments are passed, display error message
+elif [ $# -ne 2 ]; then
+    echo 'The script takes not more than 2 arguments, use "--help as the argument to get help'
+    exit -1
+
+# Check whether the name and email (first and second arguments passed) match the regular expressions, display an error message an exit if there's no match
+elif ! [[ $1 =~ $NAMEREGEX ]]; then
+    echo 'Invalid GitHub username! Enter "gconfig" for help'
+    exit -1
+    
+elif ! [[ $2 =~ $EMAILREGEX ]]; then
+    echo 'Email not valid! Enter "gconfig" for help'
+    exit -1
+fi
+
+# configure git with the username and email, globally
+git config --global user.name $USERNAME
+git config --global user.email $EMAIL
+
+# Display success message and show current configuration
+echo 'done with git configuration. Current details:'
+git config --global user.name
+git config --global user.email
