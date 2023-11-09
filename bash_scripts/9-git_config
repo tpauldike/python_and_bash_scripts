@@ -20,7 +20,7 @@ elif [ $# -eq 0 ] || [ $1 = '--help' ]; then
 
 # If more than 2 arguments are passed, display error message
 elif [ $# -ne 2 ]; then
-    echo 'The script takes not more than 2 arguments, use "--help as the argument to get help'
+    echo 'The script takes not more than 2 arguments, use "--help" as the argument to get help'
     exit -1
 
 # Check whether the name and email (first and second arguments passed) match the regular expressions, display an error message an exit if there's no match
