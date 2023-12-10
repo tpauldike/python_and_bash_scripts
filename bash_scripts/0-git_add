@@ -1,16 +1,35 @@
 #!/bin/bash
+# Push to GitHub default branch by entering 'p'
+# Push to the upstream of a newly created branch using 'p head'
+# Commit locally and don't push to the remote, with 'p commit'
+# Get help by using 'p --help' or entering more than 1 argument
+
+if [ $# -gt 1 ] || [[ $1 = '--help' ]]; then
+	# Display Usage instruction if --help was the argument or if more than one arguments were passed
+	echo -e "Usage:\t'p'\t\tadd, commit and push to the default branch"
+	echo -e "\t'p head'\tpush to the new branch, create it if it's not available remotely"
+	echo -e "\t'p commit'\tadd and commit locally but don't push remotely"
+	exit 0
+fi
+
+BRANCH=$1
 
 echo -e "Enter the file to be pushed: \c"
-
 read -e -r file
 
-git add $"$file"
+git add "$file"
 
-echo -e "Enter Your Commit Message (no quotation marks): \c"
+echo -e "Commit Message (no quotes): \c"
+read -e -r message
 
-read -e  -r message
+git commit -m "$message"
 
-git commit -m $"$message"
-
-git push
-
+if [[ $BRANCH = 'head' ]]; then
+	git push origin HEAD
+	echo -e "\nExecuted 'git push origin HEAD'"
+elif [[ $BRANCH = 'commit' ]]; then
+	echo -e "\n'git push' not executed"
+else
+	git push
+	echo -e "\nExecuted 'git push'"
+fi
