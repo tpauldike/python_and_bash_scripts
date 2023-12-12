@@ -6,7 +6,8 @@ Here are some scripts that I use (including the ones in the [python_scripts dire
 
 In this directory are the following:
 ### 0. [0-git_add](./0-git_add)
-A script that makes it easier for you to push to git on shell without having to enter:
+#### Basic Info
+This is a bash script that makes it easier for you to push to git from the command line without having to enter:
 
 ```bash
 $ git add <file_path>
@@ -14,15 +15,41 @@ $ git commit -m '<commit message>'
 $ git push
 ```
 
-When you run this script, it prints a prompt for you to enter the file path or the file you wish to push, after which it let's you enter your commit message without the command or `-m` or quotation marks (' ', " "), and then the file(s) is/are pushed to git automatically.
+When you run this script, it prints a prompt for you to enter the file path or the file you wish to push, after which it let's you enter your commit message without the command or `-m` or quotation marks ('...', "..."), and then the file(s) is/are pushed to git automatically.
 
-Note that you can simply enter dot (".") to add everything in the current directory to pushed to git, just the same way you enter dot to `git add`, as in; `git add .`
+Note that you can simply enter dot (".") to add everything in the current directory to pushed to git (i.e, `./0-git_add .`), just the same way you enter dot to `git add`, as in; `git add .`
+
+#### Advanced Info
+Certain argments can be passed to the script to make it do something else or control its execution. Below is the summary of how the script is used, assuming you saved it with the name `0-git_add`, and moved it to `/bin` or `/usr/bin` *(You may refer to [How to use scripts on your CLI](#usage)*:
+
+| Command | Operation |
+| --- | ---- |
+| `./0-git_add` | Push to the default branch |
+| `./0-git_add --help` | Get help/info on how the script is used |
+| `./0-git_add head` | This is used when you created a new branch locally and want your work pushed to the same branch remotely |
+| `./0-git_add commit` | Commits your work to the repository locally, without pushing to GitHub, until you later enter `gti push` or run the script `./0-git_add` |
 
 ### 1. [1-git_rm](./1-git_rm)
-This script works just like **0-git_add**, described above, but rather removes from git the file that you pass to it.
+This script removes from git the file that you pass to it; it is automated to perform the following commands for you:
+
+```bash
+$ git rm <file_path>
+$ git commit -m '<commit message>'
+$ git push
+```
+
+When you run this script, it prints a prompt for you to enter the file path or the file you wish to delete from git, after which it let's you enter your commit message without the command or `-m` or quotation marks ('...', "..."), and then the change is pushed to git automatically.
 
 ### 2. [2-git_rm_dir](./2-git_rm_dir)
-This script works like *1-git_rm* but recursively removes a sub-directory in the repository and all of its content
+This script works like *1-git_rm* but recursively removes a sub-directory in the repository and all of its content, running the following commands automatically for you:
+
+```bash
+$ git rm -r <directory>
+$ git commit -m '<commit message>'
+$ git push
+```
+
+When you run this script, it prints a prompt for you to enter the directory you wish to delete from git, after which it let's you enter your commit message without the command or `-m` or quotation marks ('...', "..."), and then the changes are pushed to git automatically.
 
 ### 3. [3-ssh_git_clone](./3-ssh_git_clone)
 For me, I saved all of this as `g`, so that if I did either `g <repo>` or `g <ssh_link>`, the repository will be cloned. In other words, I don't have to enter `git clone <ssh_link>`. Entering *g* is sure faster than entering *git clone* but please choose a name that you can easily remember.
