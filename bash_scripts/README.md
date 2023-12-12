@@ -17,17 +17,17 @@ $ git push
 
 When you run this script, it prints a prompt for you to enter the file path or the file you wish to push, after which it let's you enter your commit message without the command or `-m` or quotation marks ('...', "..."), and then the file(s) is/are pushed to git automatically.
 
-Note that you can simply enter dot (".") to add everything in the current directory to pushed to git (i.e, `./0-git_add .`), just the same way you enter dot to `git add`, as in; `git add .`
+Note that you can simply enter dot (`.`) to add everything in the current directory to pushed to git (i.e, `./0-git_add .`), just the same way you enter dot to `git add`, as in; `git add .`
 
 #### Advanced Info
 Certain argments can be passed to the script to make it do something else or control its execution. Below is the summary of how the script is used, assuming you saved it with the name `0-git_add`, and moved it to `/bin` or `/usr/bin` *(You may refer to [How to use scripts on your CLI](#usage)*:
 
 | Command | Operation |
 | --- | ---- |
-| `./0-git_add` | Push to the default branch |
-| `./0-git_add --help` | Get help/info on how the script is used |
-| `./0-git_add head` | This is used when you created a new branch locally and want your work pushed to the same branch remotely |
-| `./0-git_add commit` | Commits your work to the repository locally, without pushing to GitHub, until you later enter `gti push` or run the script `./0-git_add` |
+| ./0-git_add | Push to the default branch |
+| ./0-git_add --help | Get help/info on how the script is used |
+| ./0-git_add head | This is used when you created a new branch locally and want your work pushed to the same branch remotely |
+| ./0-git_add commit | Commits your work to the repository locally, without pushing to GitHub, until you later enter `git push` or run the script `./0-git_add` |
 
 ### 1. [1-git_rm](./1-git_rm)
 This script removes from git the file that you pass to it; it is automated to perform the following commands for you:
