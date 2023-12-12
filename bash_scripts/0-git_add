@@ -6,9 +6,10 @@
 
 if [ $# -gt 1 ] || [[ $1 = '--help' ]]; then
 	# Display Usage instruction if --help was the argument or if more than one arguments were passed
-	echo -e "Usage:\t'p'\t\tadd, commit and push to the default branch"
-	echo -e "\t'p head'\tpush to the new branch, create it if it's not available remotely"
-	echo -e "\t'p commit'\tadd and commit locally but don't push remotely"
+	echo -e "Usage:\t'./0-git_add'\tadd, commit and push to the default branch"
+	echo -e "\t'./0-git_add head'\tpush to the new branch, create it if it's not available remotely"
+	echo -e "\t'./0-git_add commit'\tadd and commit locally but don't push remotely"
+	echo -e "\t'./0-git_add --help'\tdisplay help on usage
 	exit 0
 fi
 
